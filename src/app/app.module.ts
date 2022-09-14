@@ -12,6 +12,8 @@ import { EmployeeformComponent } from './employeeform/employeeform.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [AppComponent, EmployeeformComponent],
   imports: [
@@ -25,6 +27,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
