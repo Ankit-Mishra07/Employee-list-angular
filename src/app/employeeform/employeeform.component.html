@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Add Employee Data</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>Employee Name</mat-label>
+    <input matInput placeholder="Enter employee name" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Email Address</mat-label>
+    <input type="email" matInput placeholder="Enter email address" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Designation </mat-label>
+    <input matInput placeholder="Enter designation" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Department</mat-label>
+    <mat-select matInput placeholder="Select department name">
+      <mat-option value="Technical">Technical Department</mat-option>
+      <mat-option value="HR">HR Department</mat-option>
+      <mat-option value="Financial">Financial Department</mat-option>
+      <mat-option value="Administrative">Administrative Department</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button style="margin-left: 8px" mat-raised-button color="primary">
+    Save
+  </button>
+</div>
