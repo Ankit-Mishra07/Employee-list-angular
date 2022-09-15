@@ -41,6 +41,7 @@ export class EmployeeformComponent implements OnInit {
       const newData = JSON.parse(data);
       newData.push(this.employeeForm.value);
       localStorage.setItem('employeeList', JSON.stringify(newData));
+      alert('Employee data is added');
     }
     this.employeeForm.reset();
     this.dialogRef.close('save');
