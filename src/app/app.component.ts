@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
     'email',
     'department',
     'designation',
+    'action',
   ];
 
   dataSource!: MatTableDataSource<DataType[]>;
@@ -54,7 +55,13 @@ export class AppComponent implements OnInit {
       this.dataSource.sort = this.sort;
     }
   }
-
+  editEmployeeData(row: DataType, i: any) {
+    console.log(row, i);
+    this.dialog.open(EmployeeformComponent, {
+      width: '30%',
+      data: row,
+    });
+  }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
