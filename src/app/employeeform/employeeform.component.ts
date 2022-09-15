@@ -96,6 +96,7 @@ export class EmployeeformComponent implements OnInit {
       let searchData = JSON.parse(AllData);
       searchData[this.Index] = this.employeeForm.value;
       localStorage.setItem('employeeList', JSON.stringify(searchData));
+      alert('Product is updated successfully');
     }
     this.employeeForm.reset();
     this.dialogRef.close('update');
